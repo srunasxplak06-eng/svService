@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ร้านอาหารของอัซ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">ร้านอัซฟู้ด</div>
+      <a class="btn admin" href="/admin.html">Admin</a>
+    </nav>
+    <div class="hero-content">
+      <h1>เมนูแนะนำวันนี้</h1>
+      <p>อาหารสด สะอาด ส่งไว ถึงใจ</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="menu-grid" class="menu-grid"></section>
+
+    <aside class="cart-panel">
+      <h2>ตะกร้าของคุณ</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="total">รวม: <span id="cart-total">0.00</span> ฿</div>
+        <button id="checkoutBtn" class="btn primary">สั่งซื้อ</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal checkout -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-card">
+      <h3>กรอกที่อยู่จัดส่ง</h3>
+      <input id="name" placeholder="ชื่อ-นามสกุล" />
+      <input id="phone" placeholder="เบอร์โทร" />
+      <textarea id="address" placeholder="ที่อยู่"></textarea>
+      <div class="modal-actions">
+        <button id="confirmOrder" class="btn primary">ยืนยันการสั่งซื้อ</button>
+        <button id="closeModal" class="btn">ยกเลิก</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="menu.js"></script>
+</body>
+</html>
